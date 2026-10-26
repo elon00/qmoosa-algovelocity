@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "qmoosa-algovelocity": {
+      "tools": [
+        {
+          "name": "stream_asa_micropayment",
+          "description": "Streams instant sub-cent ASA micropayments via Algorand atomic transaction groups",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "receiver": {
+                "type": "string"
+              },
+              "amount_microalgos": {
+                "type": "integer"
+              },
+              "asset_id": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "receiver",
+              "amount_microalgos"
+            ]
+          }
+        },
+        {
+          "name": "verify_algorand_round",
+          "description": "Verifies cryptographic transaction finality in Algorand round state",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "tx_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "tx_id"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
